@@ -29,19 +29,26 @@ else:
 
 number_1 = random.randrange(1, 11)
 number_2 = random.randrange(1, 11)
-if (number_1 > 0 and number_1 > 0) and (number_1 <= 5 and number_2 <= 5):
-    result_2 = f'{number_1} * {number_2}'
-elif (5 < number_1 < 10) or (5 < number_2 < 10):
-    result_2 = f'{number_1} + {number_2}'
-print(result_2)
+result_2 = None
+if (0 < number_1 <= 5) and (0 < number_2 <= 5):
+    result_2 = f'{number_1} * {number_2} = {number_1 * number_2} // Both numbers are less than 5'
+elif ((5 < number_1 < 10) and (not 5 < number_2 < 10)) or ((5 < number_2 < 10) and (not 5 < number_1 < 10)):
+    result_2 = f'{number_1} + {number_2} = {number_1 + number_2} // One of the numbers is greater than 5'
+elif (5 < number_1 < 10) and (5 < number_2 < 10):
+    result_2 = f'{number_1} + {number_2} = {number_1 + number_2} // Both numbers are greater then 5 and less than 10'
+# print(result_2)
 # Enter your first name and save it to first_name variable,
 # then Enter last name and save it to last_name
 # If first_name or last_name are shorter than 6 characters, save a full name (with a space between) to result_3
 # Else save first_name to result_3 as many times as length of last_name value
 
-first_name = None
-last_name = None
-result_3 = None
+first_name = input("Enter a first name: ")
+last_name = input("Enter a last name: ")
+if len(first_name) < 6 or len(last_name) < 6:
+    result_3 = f'{first_name} {last_name}'
+else:
+    result_3 = len(last_name) * first_name
+# print(result_3)
 
 
 # Enter a random number. Save this value to random_number variable
@@ -49,5 +56,12 @@ result_3 = None
 # If a number doesn't meet the first condition, find the remainder of random_value divided by 2.
 # If it is 0, save the text "Even number" to result_4 , else save the message "Odd number"
 
-random_number = None
-result_4 = None
+random_number = random.randrange(201)
+if random_number < 10 or random_number > 99:
+    result_4 = f'{random_number}: Please, put in a number between 10 and 99'
+else:
+    if random_number % 2 == 0:
+        result_4 = f'{random_number}: Even number'
+    else:
+        result_4 = f'{random_number}: Odd number'
+# print(result_4)
