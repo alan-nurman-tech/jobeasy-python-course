@@ -2,20 +2,22 @@
 # of string_1. Use indexes.
 
 string_1 = 'Python'
-result_1 = None
-result_2 = None
+result_1 = len(string_1) - 1
+result_2 = string_1[result_1]
+# print(result_2)
 
 
 # Save to variable result_3 string value from string_2 variable, written in reverse order, using concatenation.
 
 string_2 = 'Python'
-result_3 = None
-
+result_3 = string_2[::-1]
+# print(result_3)
 
 # Slice string string_3 from 5th to 20th (excluding 20th) character and save the result to variable result_4
 
 string_3 = 'Python is a programming language that lets you work quickly and integrate systems more effectively'
-result_4 = None
+result_4 = string_3[4:21]
+print(result_4)
 
 
 # Slice string string_4 from 10th character to the end of the string. Save only every second character to variable

@@ -1,3 +1,4 @@
+import random
 # Change result_string_1 that 'very simple language' will be displayed on a new line
 
 result_string_1 = 'Python is a \nvery simple language'
@@ -22,7 +23,7 @@ print(result_value)
 # Enter a random number, then save the value to n variable.
 # Finally, you should repeat the variable "word" n times and save the value to result_string_3
 
-n = 5
-word = 'super'
+n = random.randrange(0, 5)
+word = 'Super'
 result_string_3 = word * n
-print(result_string_3)
+print(f'Random number is: {n} and result is: {result_string_3}')
