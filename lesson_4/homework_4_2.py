@@ -3,8 +3,13 @@
 # Ex. 1
 # Enter your name, save it in name variable and save in result_1 variable your name repeated 3 times (use loops)
 
-name_1 = None
+name_1 = "Rafael"
 result_1 = None
+i == 3
+while i >= 0:
+    result_1 + name_1
+    i -1
+print(result_1)
 
 # TODO: Here is your code
 
